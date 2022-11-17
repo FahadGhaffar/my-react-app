@@ -1,23 +1,30 @@
 import logo from './logo.svg';
-import './App.css';
+import Meetuplist from './components/meetups/Meetuplist';
+const DUMMY_DATA = [
+  {
+    id: 'm1',
+    title: 'This is a first meetup',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',
+    address: 'Meetupstreet 5, 12345 Meetup City',
+    description:
+      'This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!',
+  },
+  {
+    id: 'm2',
+    title: 'This is a second meetup',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',
+    address: 'Meetupstreet 5, 12345 Meetup City',
+    description:
+      'This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!',
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Meetuplist meetup={DUMMY_DATA} />
     </div>
   );
 }
